@@ -1,5 +1,7 @@
-import React from "react";
-import CarouselCard from "./CarouselCard";
+import React, { useState } from "react";
+import "./Carousel.css";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function Carousel(){
     const carouselData = [
@@ -20,11 +22,34 @@ function Carousel(){
         },
     ];
 
+    const [index, setIndex] = useState(0);
+    const [currentImage, setCurrentImage] = useState(carouselData[0].image);
+
+    function showPreviousImage(){
+        if(index == 0) return;
+
+        setCurrentImage(carouselData[index-1].image);
+        setIndex(index-1);
+    }
+
+    function showNextImage(){
+        if(index == 2) return;
+        
+        setCurrentImage(carouselData[index+1].image);
+        setIndex(index+1);
+    }
+
     return(
         <div className="carousel">
-            {carouselData.map((value) => (
-                <CarouselCard image = {value.image}/>
-            ))}
+            <div className="carousel_arrow" onClick={showPreviousImage}>
+                <ArrowBackIosIcon />
+            </div>
+
+            <img className="carousel_images" src={currentImage}/>
+
+            <div className="carousel_arrow" onClick={showNextImage}>
+                <ArrowForwardIosIcon />
+            </div>
         </div>
     );
 }
