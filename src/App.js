@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import CategoriesList from './components/CategoriesList/CategoriesList';
 import Carousel from './components/Carousel/Carousel';
+import BankImage from './components/BankImage/BankImage';
 
 function App() {
   // 1. Navbar
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <CategoriesList />
       <Carousel />
+      <BankImage />
     </div>
   );
 }

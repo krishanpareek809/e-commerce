@@ -26,14 +26,22 @@ function Carousel(){
     const [currentImage, setCurrentImage] = useState(carouselData[0].image);
 
     function showPreviousImage(){
-        if(index == 0) return;
+        if(index == 0){
+            setCurrentImage(carouselData[carouselData.length-1].image);
+            setIndex(carouselData.length-1);
+            return;
+        }
 
         setCurrentImage(carouselData[index-1].image);
         setIndex(index-1);
     }
 
     function showNextImage(){
-        if(index == 2) return;
+        if(index === carouselData.length-1){
+            setCurrentImage(carouselData[0].image);
+            setIndex(0);
+            return;
+        }
         
         setCurrentImage(carouselData[index+1].image);
         setIndex(index+1);

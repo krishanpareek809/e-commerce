@@ -1,0 +1,9 @@
+.bank_image{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.bank_image>img{
+    width: 96.5%;
+}
