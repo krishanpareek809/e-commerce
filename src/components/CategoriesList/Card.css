@@ -9,6 +9,7 @@
 
 .single_category>img{
     width: 70px;
+    cursor: pointer;
 }
 
 .single_category>p{

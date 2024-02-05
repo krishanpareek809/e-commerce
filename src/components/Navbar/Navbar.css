@@ -15,6 +15,7 @@
 .navbar_left>p{
     font-weight: 800;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .navbar_left_input{
@@ -37,4 +38,5 @@
     margin-left: 150px;
     font-weight: 600;
     padding: 7px 40px;
+    cursor: pointer;
 }

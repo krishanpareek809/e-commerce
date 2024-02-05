@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import CategoriesList from './components/CategoriesList/CategoriesList';
 import Carousel from './components/Carousel/Carousel';
 import BankImage from './components/BankImage/BankImage';
+import Products from './components/Products/Products';
 
 function App() {
   // 1. Navbar
@@ -16,6 +17,7 @@ function App() {
       <CategoriesList />
       <Carousel />
       <BankImage />
+      <Products />
     </div>
   );
 }
